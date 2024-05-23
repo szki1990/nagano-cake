@@ -1,1 +1,19 @@
-<h1>Top</h1>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>管理者側</title>
+    <!-- headタグ内のコード -->
+  </head>
+  <body>
+      <h1>Top</h1>
+    <header>
+      <% if admin_signed_in? %>
+      <li>
+        <%= link_to "ログアウト", new_public_session_path, method: :delete %>
+      </li>
+    <% end %>
+    </header>
+    <%= yield %>
+  </body>
+</html>
