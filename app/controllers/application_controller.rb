@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
     if resource_or_scope == :admin
       '/admin/sign_in'  
     else
-      root_path 
+      root_path
     end
   end
 end
